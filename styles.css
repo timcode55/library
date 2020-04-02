@@ -9,7 +9,9 @@ body {
 }
 
 .library {
-	margin-top: 30vh;
+	margin-top: 10vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 #title,
@@ -18,4 +20,40 @@ body {
 	width: 300px;
 	height: 30px;
 	margin-top: 15px;
+}
+
+.mainTitle {
+	text-align: center;
+}
+
+form {
+	position: flex;
+	text-align: center;
+}
+
+.entry {
+	position: relative;
+	margin-top: 30px;
+}
+
+button {
+	margin-top: -20px;
+	width: 70px;
+	height: 25px;
+	border-radius: 15%;
+	background-color: aqua;
+}
+
+input {
+	margin-bottom: 25px;
+}
+
+.library div {
+	margin-top: 20px;
+	margin-left: 30px;
+	/* display: flex; */
+}
+
+.library div img {
+	width: 250px;
 }

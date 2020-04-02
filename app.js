@@ -30,25 +30,36 @@ function Book(title, author, pages, cover, isRead) {
 	};
 }
 
-const book = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'not read yet');
-const book2 = new Book('The Profit', 'John Grisham', 400, 'not read yet');
-console.log(book.info());
-
-let h1 = document.createElement('h1');
-let addItem = document.querySelector('.library');
-// h1.textContent = printbooks()[0];
-h1.textContent = book.info();
-h1.textContent += book2.info();
-// h1.setAttribute('class', 'library');
-addItem.appendChild(h1);
-console.log(printBooks());
-// console.log(books);
-function printBooks() {
-	return books.map((item) => item.title);
+function addBookToLibrary() {
+	// do stuff here
 }
 
-// console.log(book);
+let titleInput = document.getElementById('title');
+let authorInput = document.getElementById('author');
+let imageInput = document.getElementById('image');
+document.querySelector('form.book-form').addEventListener('submit', function(e) {
+	e.preventDefault();
 
-// h1.textContent = book.title;
-// h1.setAttribute('class', 'library');
-// document.body.appendChild(h1);
+	// console.log(titleInput.value);
+	// console.log(authorInput.value);
+	// console.log(imageInput.value);
+	let h1 = document.createElement('h1');
+	let h2 = document.createElement('h2');
+	let imgDiv = document.createElement('img');
+	let section = document.createElement('div');
+	let addItem = document.querySelector('.library');
+	// h1.textContent = printbooks()[0];
+	h1.textContent = titleInput.value;
+	h2.textContent = authorInput.value;
+	imgDiv.src = `${imageInput.value}`;
+	imgDiv.width = 200;
+
+	addItem.appendChild(section);
+	section.appendChild(h1);
+
+	section.appendChild(h2);
+	section.appendChild(imgDiv);
+	titleInput.value = '';
+	authorInput.value = '';
+	imageInput.value = '';
+});
