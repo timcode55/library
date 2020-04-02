@@ -1,0 +1,21 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: gray;
+}
+
+.library {
+	margin-top: 30vh;
+}
+
+#title,
+#author,
+#image {
+	width: 300px;
+	height: 30px;
+	margin-top: 15px;
+}
