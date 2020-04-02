@@ -30,6 +30,11 @@ function Book(title, author, pages, cover, isRead) {
 	};
 }
 
+function addBookToLibrary(obj) {
+	myLibrary.push(obj);
+	render();
+}
+
 function addBookToLibrary() {
 	// do stuff here
 }
